@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | Pritam grocery Store</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Pritam grocery Store</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="products">
+    <h1>Our Products</h1>
+    <div class="product-list">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="FreshApples.jpg" alt="Product"/>
+        <h3>Fresh Apples</h3>
+        <p>₹120/kg</p>
+        <button onclick="openForm('Fresh Apples')">Buy</button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="OrganicMilk.jpg" alt="Product"/>
+        <h3>Organic Milk</h3>
+        <p>₹50/ltr</p>
+        <button onclick="openForm('Organic Milk')">Buy</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="Tomatoes.jpg" alt="Product"/>
+        <h3>Tomatoes</h3>
+        <p>₹40/kg</p>
+        <button onclick="openForm('Tomatoes')">Buy</button>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="WholeWheatBread.jpg" alt="Product"/>
+        <h3>Whole Wheat Bread</h3>
+        <p>₹30/pack</p>
+        <button onclick="openForm('Whole Wheat Bread')">Buy</button>
+      </div>
+
+      <!-- Add more products here -->
+    </div>
+  </section>
+
+
+
+  <!-- Order Form (Initially hidden) -->
+<div class="order-form-container" id="orderForm" style="display: none;">
+  <form id="orderFormElement" action="https://formspree.io/f/mvgaybwj" method="POST">
+    <h2>Order Product</h2>
+
+    <!-- Product name (readonly, passed dynamically via JS) -->
+    <input type="text" name="product" id="productName" readonly required>
+
+    <!-- User Name -->
+    <input type="text" name="name" id="yourName" placeholder="Your Name" required>
+
+    <!-- Phone Number -->
+    <input type="text" name="phone" placeholder="Your Phone Number" required>
+
+    <!-- Email -->
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <!-- Address -->
+    <textarea name="address" placeholder="Your Address" required></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit Order</button>
+
+    <!-- Cancel Button -->
+    <button type="button" onclick="closeForm()">Cancel</button>
+  </form>
+</div>
+
+  <footer>
+    <p>&copy; 2025 Pritam's grocery Store | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
