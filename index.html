@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pritam Grocery Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Pritam Grocery Store</div>
+    
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Fresh Groceries Delivered to Your Doorstep</h1>
+    <p>Order fruits, vegetables, and daily essentials with just a click.</p>
+    <button onclick="alert('Feature coming soon!')">Shop Now</button>
+  </section>
+
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-list">
+      <div class="product-card">
+        <img src="FreshApples.jpg" alt="Product" />
+        <h3>Fresh Apples</h3>
+        <p>₹120/kg</p>
+        <button onclick="openForm('Fresh Apples')">Buy</button>
+      </div>
+      <div class="product-card">
+        <img src="OrganicMilk.jpg" alt="Product" />
+        <h3>Organic Milk</h3>
+        <p>₹50/ltr</p>
+        <button onclick="openForm('Organic Milk')">Buy</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form -->
+  <div class="order-form-container" id="orderForm" style="display: none;">
+    <form id="orderFormElement" action="https://formspree.io/f/mvgaybwj" method="POST">
+      <h2>Order Product</h2>
+      <input type="text" name="product" id="productName" readonly required />
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="phone" placeholder="Your Phone Number" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="address" placeholder="Your Address" required></textarea>
+      <button type="submit">Submit Order</button>
+      <button type="button" onclick="closeForm()">Cancel</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Pritam's Grocery Store | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
